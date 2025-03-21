@@ -244,21 +244,8 @@
             case 3: return 'rd';
             default: return 'th';
 
-function shareDocument() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Affidavit Form',
-            text: 'Please check out this affidavit form.',
-            url: window.location.href
-        }).then(() => {
-            console.log('Document shared successfully!');
-        }).catch((error) => {
-            console.error('Error sharing document:', error);
-        });
-    } else {
-        alert('Sharing is not supported on this device.');
+        }
     }
-}
 
     const daySuffix = getDaySuffix(day);
     return `${day}${daySuffix} ${month}, ${year}`;
