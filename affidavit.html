@@ -247,11 +247,18 @@
             default: return 'th';
 
 	function shareDocument() {
-   	 if (navigator.share) {
-        	navigator.share({
-           	 title: 'Affidavit Form',
-            	text: 'Please check this affidavit document.',
-            	url: window.location.href
+    if (navigator.share) {
+        navigator.share({
+            title: 'Affidavit Form',
+            text: 'Please check this affidavit document.',
+            url: window.location.href
+        })
+        .then(() => console.log('Successfully shared'))
+        .catch((error) => console.log('Error sharing:', error));
+    } else {
+        alert('Sharing not supported on this browser.');
+    }
+}
         })
         .then(() => console.log('Successfully shared'))
         .catch((error) => console.log('Error sharing:', error));
