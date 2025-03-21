@@ -190,7 +190,6 @@
         <div class="download-button">
             <button onclick="history.back()">Back</button>
             <button onclick="saveAsPDF()">Download</button>
-	    <button onclick="shareDocument()">Share</button>
 	</div>
             
       <script>
@@ -229,7 +228,7 @@
             window.print();
         }
 
-        function dateConveter(date) {
+function dateConveter(date) {
     // date is look like this 1987-03-11 convert it into 11th March, 1987
     const dateObj = new Date(date);
     const month = dateObj.toLocaleString('default', { month: 'long' });
