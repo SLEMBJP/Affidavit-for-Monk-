@@ -187,13 +187,17 @@
             </table>
         </div>
         <div>
-        <div class="download-button">
+        <div class="Download-button">
             <button onclick="history.back()">Back</button>
             <button onclick="saveAsPDF()">Download</button>
-	    <button onclick="shareDocument()">Share</button>
-	</div>
+        </div>
+
+            <footer style="text-align: center; margin-top: 20px; font-size: 14px; color: #555;">
             
-      <script>
+        </footer>
+        </div>
+        
+        <script>
             const FullName = localStorage.getItem('fullname');
             const FullName1 = localStorage.getItem('fullname1');
             const FullName2 = localStorage.getItem('fullname2');
@@ -243,20 +247,6 @@
             case 2: return 'nd';
             case 3: return 'rd';
             default: return 'th';
-
-	function shareDocument() {
-   	 if (navigator.share) {
-        	navigator.share({
-           	 title: 'Affidavit Form',
-            	text: 'Please check this affidavit document.',
-            	url: window.location.href
-        })
-        .then(() => console.log('Successfully shared'))
-        .catch((error) => console.log('Error sharing:', error));
-    } else {
-        alert('Sharing not supported on this browser.');
-    }
-}
         }
     }
 
