@@ -232,7 +232,12 @@
                 alert("Please fill out all fields before printing.");
                 return;
             }
+		document.body.style.overflow = "hidden";
+    		document.body.style.marginBottom = "0";
+		    
             window.print();
+		document.body.style.overflow = "";
+    		document.body.style.marginBottom = "";
         }
 
 function dateConveter(date) {
