@@ -138,4 +138,22 @@ media print {
     .input-text {
         border-bottom: none;
     }
+    @media print {
+    html, body {
+        border: none !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    .page,
+    .container,
+    .form-container,
+    .affidavit-container {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    @page {
+        margin: 0;
+    }
 }
