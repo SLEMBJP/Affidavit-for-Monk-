@@ -11,85 +11,106 @@
 
 
      <style>
-        p {
-            text-align:justify;
-        }
-     	@media print {
-            body {
-                width: 210mm;
-                height: 297mm;
-                margin: 0mm;
-                padding: 10mm;
-                
-            }
-            .download-button {
-                display: none;
-            }
-            .input-text {
-                border-bottom:none;
-            }
-        }
-        body {
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.5;
-            max-width: 800px;
-            margin:auto;
-            padding: 30px;
-            background-color: #f5f5f5;
-            width: 20cm;
-            height: 25.5cm;
-            box-sizing:inherit;
-            font-size: 18px;
-        }
-        
-        
-        li{
-            border: none;
-            border-bottom:none;
-            font-size: 18px;
-            color: #000;
-        }
+    p {
+        text-align: justify;
+    }
 
-        .signature {
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-        .download-button {
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-        button {
-            background-color: #60a1e3ec;
-            color: rgb(255, 255, 255);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor:pointer;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        button:hover {
-            background-color: #60a2e3;
-        }
+    /* Normal Screen */
+    body {
+        font-family: "Times New Roman", Times, serif;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        background-color: #f5f5f5;
+        width: 20cm;
+        min-height: 25.5cm;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    li {
+        border: none;
+        border-bottom: none;
+        font-size: 18px;
+        color: #000;
+    }
+
+    .signature {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .download-button {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    button {
+        background-color: #60a1e3ec;
+        color: rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    button:hover {
+        background-color: #60a2e3;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .footer {
+        margin-top: 0;
+        font-size: 18px;
+        max-width: 50%;
+    }
+
+    /* A4 PDF / Print */
+    @media print {
+
         @page {
             size: A4;
             margin: 10mm;
         }
-        .bold {
-            font-weight: bold;
-        }
-        .bold {
-            font-weight: bold;
-        }
-        .footer {
-            margin-top: 0px;
-            font-size: 18px;
-            max-width: 50%;
-                           
-           
-        }
-    </style>
 
-    </head>
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: auto !important;
+            max-width: none !important;
+            height: auto !important;
+            min-height: 0 !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            background: #ffffff !important;
+            border: none !important;
+            box-shadow: none !important;
+
+            box-sizing: border-box !important;
+        }
+
+        .download-button {
+            display: none !important;
+        }
+
+        .input-text {
+            border-bottom: none !important;
+        }
+    }
+</style>   
+	</head>
 
     <body>
         <p>
