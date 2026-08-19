@@ -125,35 +125,37 @@ input[type="submit"]:hover {
         font-size: 0.9rem;
     }
 }
-media print {
-    body {
-        width: 210mm;
-        height: 297mm;
-        margin: 10mm;
-        padding: 10mm;
-    }
-    .download-button, .Download-button {
-        display: none;
-    }
-    .input-text {
-        border-bottom: none;
-    }
-    @media print {
-    html, body {
-        border: none !important;
-        box-shadow: none !important;
-        background: white !important;
-    }
-
-    .page,
-    .container,
-    .form-container,
-    .affidavit-container {
-        border: none !important;
-        box-shadow: none !important;
-    }
+@media print {
 
     @page {
-        margin: 0;
+        size: A4;
+        margin: 15mm;
+    }
+
+    html,
+    body {
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #fff !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .download-button,
+    .Download-button {
+        display: none !important;
+    }
+
+    input,
+    button {
+        box-shadow: none !important;
+    }
+
+    .input-text {
+        border-bottom: none !important;
     }
 }
+    }
+    }
